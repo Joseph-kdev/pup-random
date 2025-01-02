@@ -1,0 +1,15 @@
+{
+  "name": "pup-random",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Joseph",
+  "license": "MIT",
+  "description": "",
+  "dependencies": {
+    "puppeteer": "^23.11.1"
+  }
+}
