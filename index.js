@@ -1,5 +1,5 @@
 const puppeteer = require("puppeteer")
-const cron = require("node-cron")
+// const cron = require("node-cron")
 
 const postQuote = async() => {
     const browser = await puppeteer.launch({
@@ -23,11 +23,13 @@ console.log("Quote posted successfully")
 
 }
 
-cron.schedule("*/5 * * * *", async () => {
-    try {
-        postQuote()
-        console.log('Running task at:', new Date().toISOString());
-    } catch (error) {
-        console.error('Task failed:', error);
-    }
-})
+postQuote()
+
+// cron.schedule("*/5 * * * *", async () => {
+//     try {
+//         postQuote()
+//         console.log('Running task at:', new Date().toISOString());
+//     } catch (error) {
+//         console.error('Task failed:', error);
+//     }
+// })
