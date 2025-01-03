@@ -12,6 +12,12 @@ jobs:
         with:
           node-version: '20'
       - name: Install dependencies
-        run: npm install
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y chromium-browser
+          npm install
       - name: Execute JS file
-        run: node index.js
+        run: node your-script.js
+        env:
+          PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: true
+          PUPPETEER_EXECUTABLE_PATH: /usr/bin/chromium-browser
