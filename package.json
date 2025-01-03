@@ -10,6 +10,7 @@
   "license": "MIT",
   "description": "",
   "dependencies": {
+    "node-cron": "^3.0.3",
     "puppeteer": "^23.11.1"
   }
 }
